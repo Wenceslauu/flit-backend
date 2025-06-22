@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Core service" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.flit.core.FlitCoreApplication" />
+    <module name="core-service" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
