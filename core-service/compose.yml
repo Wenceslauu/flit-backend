@@ -1,0 +1,16 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.2.5
+    command:
+      - start-dev
+      - --import-realm
+    ports:
+      - "8180:8180"
+    volumes:
+      - ./keycloak/:/opt/keycloak/data/import
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: flit
+      KC_BOOTSTRAP_ADMIN_PASSWORD: flit
+      KC_HTTP_PORT: 8180
+      KC_HOSTNAME: http://localhost:8180
+      KC_HTTP_ENABLED: true
