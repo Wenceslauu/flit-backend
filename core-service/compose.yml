@@ -1,4 +1,12 @@
 services:
+  db:
+    image: postgres:16.9
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: flit
+      POSTGRES_PASSWORD: flit
+      POSTGRES_DB: flit
   keycloak:
     image: quay.io/keycloak/keycloak:26.2.5
     command:
