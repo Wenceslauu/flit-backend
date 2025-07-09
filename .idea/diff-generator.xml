@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DiffGenerationConfig">
+    <option name="liquibaseAuthor" value="" />
+    <option name="snapshotDb" value="false" />
+    <option name="snapshotModelValue" value="core-service:core-service" />
+    <option name="sourceModelValue" value="core-service:core-service" />
+    <option name="targetDbValue" value="5312f00a-6d4a-4e5e-9399-710fa4a28b6b" />
+  </component>
+</project>

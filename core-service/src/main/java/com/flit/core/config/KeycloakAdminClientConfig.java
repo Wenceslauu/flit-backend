@@ -25,7 +25,6 @@ public class KeycloakAdminClientConfig {
     private String adminClientSecret;
 
     @Bean
-    @Qualifier()
     KeycloakBuilder keycloak() {
         return KeycloakBuilder.builder()
                 .serverUrl(serverUrl)
@@ -36,7 +35,6 @@ public class KeycloakAdminClientConfig {
     }
 
     @Bean
-    @Qualifier()
     Keycloak adminKeycloak() {
         return KeycloakBuilder.builder()
                 .serverUrl(serverUrl)
