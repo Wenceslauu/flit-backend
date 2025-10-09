@@ -12,6 +12,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "driver_profile", schema = "public")
 public class DriverProfile {
 
     @Id

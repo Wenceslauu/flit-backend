@@ -6,5 +6,7 @@
     <option name="snapshotModelValue" value="core-service:core-service" />
     <option name="sourceModelValue" value="core-service:core-service" />
     <option name="targetDbValue" value="5312f00a-6d4a-4e5e-9399-710fa4a28b6b" />
+    <option name="updateChangeLogPath" value="src/main/resources/db/db.changelog-master.xml" />
+    <option name="updateDbConnectionName" value="5312f00a-6d4a-4e5e-9399-710fa4a28b6b" />
   </component>
 </project>
