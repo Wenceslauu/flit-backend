@@ -5,7 +5,6 @@ import com.flit.core.user.dto.request.SignUpRequestDto;
 import com.flit.core.user.dto.response.LoginResponseDto;
 import com.flit.core.user.mapper.AuthMapper;
 import com.flit.core.user.service.AuthService;
-import com.flit.core.user.service.KeycloakService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +25,7 @@ public class AuthController {
 
     @PostMapping(path = "/login")
     ResponseEntity<LoginResponseDto> login(@RequestBody LoginRequestDto requestBody) {
-        var tokens = authService.login(requestBody.getEmail(), requestBody.getPassword());
+        var tokens = authService.login(requestBody.email(), requestBody.password());
 
         var responseBody = authMapper.tokensViewToLoginResponse(tokens);
 
@@ -35,7 +34,7 @@ public class AuthController {
 
     @PostMapping(path = "/signup")
     ResponseEntity<Void> signUp(@RequestBody SignUpRequestDto requestBody) {
-        authService.signUp(requestBody.getEmail(), requestBody.getPassword(), requestBody.getRole());
+        authService.signUp(requestBody.email(), requestBody.password(), requestBody.role());
 
         return ResponseEntity.ok().build();
     }
